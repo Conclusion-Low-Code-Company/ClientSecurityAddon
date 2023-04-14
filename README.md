@@ -20,19 +20,21 @@ Features
 Download the module and add it to your project.
 
 ## Configuration
-Set the constant `MemberNameAllowCommit` to the value that you will use in your project. The name of the attribute to allow commits e.g. `_isCommitAllowed`. Set the value in your project configuration and cloud deployment environment.
 
-**After Startup**
-1. Add the microflow `AfterStartUp` of the module `ClientSecurityAddon` to your applications after startup microflow
+**1. Constant value**
+- Set the constant `MemberNameAllowCommit` to the value that you will use in your project. The name of the attribute to allow commits e.g. `_isCommitAllowed`. Set the value in your project configuration and cloud deployment environment.
 
-**Domain model - To secure an entity**
-1. Add a boolean member with the value of this constant value e.g. `_isCommitAllowed` 
-2. Specifiy no access rights on this member for any module role.
+**2. After Startup**
+- Add the microflow `AfterStartUp` of the module `ClientSecurityAddon` to your applications after startup microflow
 
-**Microflows - To allow commits in a microflow**
+**3. Domain model - To secure an entity**
+- Add a boolean member with the value of this constant value e.g. `_isCommitAllowed` 
+- Specifiy no access rights on this member for any module role.
 
-1. **One object**: Select or drag and drop the `Object allow commit` activity in your microflow and pass the object that you want to allow a commit for as the parameter to this activity.
+**4. Microflows - To allow commits in a microflow**
 
-2. **List of objects**: Select or drag and drop the `List allow commit` activity in your microflow and pass the object that you want to allow a commit for as the parameter to this activity.
+- **One object**: Select or drag and drop the `Object allow commit` activity in your microflow and pass the object that you want to allow a commit for as the parameter to this activity.
+
+- **List of objects**: Select or drag and drop the `List allow commit` activity in your microflow and pass the object that you want to allow a commit for as the parameter to this activity.
  
-3. **Alternatively**: In a `Create object` / `Change object` activity in your microflow set the member value to `true`.
+- **Alternatively**: In a `Create object` / `Change object` activity in your microflow set the member value to `true`.

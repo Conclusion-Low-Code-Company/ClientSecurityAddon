@@ -20,20 +20,16 @@ Features
 Download the module and add it to your project.
 
 ## Configuration
-1. Set the constant `MemberNameAllowCommit` to the value that you will use in your project.
-The name of the attribute to allow commits e.g. _isCommitAllowed
+Set the constant `MemberNameAllowCommit` to the value that you will use in your project. The name of the attribute to allow commits e.g. `_isCommitAllowed`. Set the value in your project configuration and cloud deployment environment.
 
-To secure an entity, 
-1. Add a boolean member with the value of this constant value 
+**Domain model - To secure an entity**
+1. Add a boolean member with the value of this constant value e.g. `_isCommitAllowed` 
 2. Specifiy no access rights on this member for any module role.
 
-To allow commits in a microflow
+**Microflows - To allow commits in a microflow**
 
-One object
-- Select or drag and drop the 'Object allow commit' activity in your microflow and pass the object that you want to allow a commit for as the parameter to this activity.
+- **One object**: Select or drag and drop the `Object allow commit` activity in your microflow and pass the object that you want to allow a commit for as the parameter to this activity.
 
-List of objects
-- Select or drag and drop the 'List allow commit' activity in your microflow and pass the object that you want to allow a commit for as the parameter to this activity.
+- **List of objects**: Select or drag and drop the `List allow commit` activity in your microflow and pass the object that you want to allow a commit for as the parameter to this activity.
  
-Alternatively
-- In a 'Create object' / 'Change object' activity in your microflow set the member value to true
+- **Alternatively**: In a `Create object` / `Change object` activity in your microflow set the member value to `true`.

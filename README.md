@@ -11,10 +11,12 @@ Features
 - Uses a global before commit event handler for validating commits of object - instead of having to create entity specific before commit event handlers.
 - Toolbox actions to allow commits of objects or lists of objects. Alternatively, manually set the boolean in a change object action.
 
+Limitation
+- This will not work for microflows that have `Apply entity access` set to `Yes` due to the fact that access rights that are set to none.
+
 ## Dependencies
-- v1.0.0 for MX 7.23.31 or higher
-- v2.0.0 for MX 8.18.19 or higher 
-- v2.0.0 for MX 9
+- v1.0.0 for MX 8.18.25 or higher and Mendix 9
+- v2.0.0 for Mendix 10.1.1 or higher
 
 ## Installation
 Download the module and add it to your project.
